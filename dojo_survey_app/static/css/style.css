@@ -1,0 +1,12 @@
+
+form {
+    /* border: 2px solid black; */
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
