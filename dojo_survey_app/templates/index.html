@@ -28,7 +28,7 @@
     </div>
 
     <div class="container">
-        <form autocomplete="off" action="result/" method="post">
+        <form autocomplete="off" action="/result" method="POST">
             {% csrf_token %}
             <div class="form-group row">
                 <label for="Inputname1" class="col-sm-2 col-form-label">Your name: </label>
@@ -57,7 +57,7 @@
                         <option value="Python">Python</option>
                         <option value="C#">C#</option>
                         <option value="Java">Java</option>
-                        <option value="JavaScript">JavaScript</option>
+                        <option value="NodeJS">NodeJS</option>
                     </select>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 <label for="comment">Comment (optional):</label>
                 <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary float-right">Submit</button>
+            <button class="btn btn-primary btn-lg float-right">Submit</button>
         </form>
     </div>
 </body>

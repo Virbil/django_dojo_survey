@@ -4,21 +4,16 @@ def index(request):
     return render(request,'index.html')
 
 def result(request):
-    if request.method == "GET":
-        print(request.GET)
     if request.method == "POST":
-        context = {
-            "name": request.POST["name_of_surveyor"].title(),
-            "dojo_location": request.POST['dojo_location'],
-            "fav_coding_language": request.POST['fav_coding_language'],
-            "comments": request.POST["comment"]
-        }
+        request.session['name'] = request.POST["name_of_surveyor"].title()
+        request.session['dojo_location'] = request.POST['dojo_location']
+        request.session['fav_coding_language'] = request.POST['fav_coding_language']
+        request.session['comments'] = request.POST["comment"]   
+        print(request.session.__dict__)
+        
+        return redirect('/show-results')
+    else:
+        return redirect('/')
 
-    return render(request, "results.html", context)
-
-
-#     http://localhost:8000 - have this display a nice looking HTML form.  
-#       The form should be submitted to '/result'
-
-#     http://localhost:8000/result - have this display a html template with 
-#       the information that was submitted by POST
+def show_results(request):
+    return render(request, "results.html")

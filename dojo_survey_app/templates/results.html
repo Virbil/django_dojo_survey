@@ -35,14 +35,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ name }}</td>
-                    <td>{{ dojo_location }}</td>
-                    <td>{{ fav_coding_language }}</td>
-                    <td>{{ comments }}</td>
+                    <td>{{ request.session.name }}</td>  <!--{{ name }}-->
+                    <td>{{ request.session.dojo_location }}</td>
+                    <td>{{ request.session.fav_coding_language }}</td>
+                    <td>{{ request.session.comments }}</td>
                 </tr>
             </tbody>
         </table>
-        <a class="btn btn-primary float-right" href="/" role="button">Back</a>
+        <a class="btn btn-primary btn-lg float-right" href="/" role="button">Back</a>
     </div>
 </body>
 </html>
