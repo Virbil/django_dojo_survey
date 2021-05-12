@@ -8,7 +8,7 @@ def result(request):
         print(request.GET)
     if request.method == "POST":
         context = {
-            "name": request.POST["name_of_surveyor"],
+            "name": request.POST["name_of_surveyor"].title(),
             "dojo_location": request.POST['dojo_location'],
             "fav_coding_language": request.POST['fav_coding_language'],
             "comments": request.POST["comment"]

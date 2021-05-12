@@ -10,3 +10,8 @@ form {
 .form-group {
     margin-bottom: 1rem;
 }
+
+.btnBack, a {
+    color: black;
+    text-decoration: none !important;
+}
